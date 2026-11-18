@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard IPPDN-PR</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f3f5f7;
+    color: #263238;
+}
+
+header {
+    background: #173b50;
+    color: white;
+    padding: 35px 6%;
+}
+
+header h1 {
+    margin: 0 0 12px;
+}
+
+main {
+    max-width: 1400px;
+    margin: auto;
+    padding: 30px 4%;
+}
+
+h2 {
+    color: #173b50;
+    margin: 35px 0 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 18px;
+    box-shadow: 0 2px 8px #00000012;
+    min-width: 0;
+}
+
+.card h3 {
+    font-size: 16px;
+    margin: 0 0 15px;
+}
+
+iframe {
+    width: 100%;
+    height: 520px;
+    border: none;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #667;
+}
+
+@media(max-width: 800px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Índice de Prioridade Preventiva de Desastres Naturais</h1>
+    <p>Análise espacial dos indicadores de vulnerabilidade,
+    frequência e impacto de desastres naturais nos municípios do Paraná.</p>
+</header>
+
+<main>
+
+    <h2>Distribuição espacial dos indicadores</h2>
+    <div class="grid">
+        
+    <section class="card">
+        <h3>Frequência de desastres</h3>
+        <iframe src="Resultados/Mapa_Frequencia_PR.html" loading="lazy"></iframe>
+    </section>
+    
+    <section class="card">
+        <h3>Índice de Prioridade Preventiva de Desastres Naturais</h3>
+        <iframe src="Resultados/Mapa_IPPDN_PR.html" loading="lazy"></iframe>
+    </section>
+    
+    <section class="card">
+        <h3>Impacto dos desastres</h3>
+        <iframe src="Resultados/Mapa_Impacto_PR.html" loading="lazy"></iframe>
+    </section>
+    
+    <section class="card">
+        <h3>Vulnerabilidade socioambiental</h3>
+        <iframe src="Resultados/Mapa_Vulnerabilidade_PR.html" loading="lazy"></iframe>
+    </section>
+    
+    </div>
+
+    <h2>Indicadores e análises</h2>
+    <div class="grid">
+        
+    <section class="card">
+        <h3>Distribuição do IPPDN por grau de prioridade</h3>
+        <img src="Resultados/grafico_1.png" alt="Distribuição do IPPDN por grau de prioridade">
+    </section>
+    
+    <section class="card">
+        <h3>Distribuição dos valores do IPPDN</h3>
+        <img src="Resultados/grafico_2.png" alt="Distribuição dos valores do IPPDN">
+    </section>
+    
+    <section class="card">
+        <h3>Frequência × Impacto</h3>
+        <img src="Resultados/grafico_3.png" alt="Frequência × Impacto">
+    </section>
+    
+    <section class="card">
+        <h3>Vulnerabilidade × Frequência</h3>
+        <img src="Resultados/grafico_4.png" alt="Vulnerabilidade × Frequência">
+    </section>
+    
+    <section class="card">
+        <h3>Vulnerabilidade × Impacto</h3>
+        <img src="Resultados/grafico_5.png" alt="Vulnerabilidade × Impacto">
+    </section>
+    
+    </div>
+
+</main>
+
+<footer>
+    Projeto IPPDN-PR | Códigos do Amanhã 2026
+</footer>
+
+</body>
+</html>
