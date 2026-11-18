@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard IPPDN-PR</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f3f4f2;
+    color: #26332e;
+}
+
+header {
+    background: #263b35;
+    color: white;
+    padding: 30px 5%;
+}
+
+main {
+    max-width: 1500px;
+    margin: auto;
+    padding: 25px;
+}
+
+.card, .grafico {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #00000012;
+}
+
+.card { margin-bottom: 25px; }
+
+iframe {
+    width: 100%;
+    height: 700px;
+    border: none;
+}
+
+.graficos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.grafico img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.grafico:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    width: 50%;
+    justify-self: center;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+}
+
+@media(max-width: 800px) {
+    .graficos { grid-template-columns: 1fr; }
+    .grafico:last-child:nth-child(odd) {
+        grid-column: auto;
+        width: 100%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>IPPD/PR </h1>
+    <p>Índice de Prioridade Preventiva de Desastres Naturais</p>
+</header>
+
+<main>
+
+    <section class="card">
+        <h2>Distribuição espacial do IPPDN</h2>
+        <iframe src="Mapa_IPPDN_PR.html"></iframe>
+    </section>
+
+    <h2>Indicadores e análises</h2>
+
+    <section class="graficos">
+        
+        <div class="grafico">
+            <h3>Distribuição do IPPDN por grau de prioridade</h3>
+            <img src="grafico_1.png" alt="Distribuição do IPPDN por grau de prioridade">
+        </div>
+        
+        <div class="grafico">
+            <h3>Histograma do IPPDN</h3>
+            <img src="grafico_2.png" alt="Histograma do IPPDN">
+        </div>
+        
+        <div class="grafico">
+            <h3>Frequência X Impacto</h3>
+            <img src="grafico_3 (1).png" alt="Frequência X Impacto">
+        </div>
+        
+        <div class="grafico">
+            <h3>Vulnerabilidade X Frequência</h3>
+            <img src="grafico_4.png" alt="Vulnerabilidade X Frequência">
+        </div>
+        
+        <div class="grafico">
+            <h3>Vulnerabilidade X Impacto</h3>
+            <img src="grafico_5.png" alt="Vulnerabilidade X Impacto">
+        </div>
+        
+    </section>
+
+</main>
+
+<footer>Projeto Códigos do Amanhã | 2026</footer>
+
+</body>
+</html>
